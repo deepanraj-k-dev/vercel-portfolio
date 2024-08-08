@@ -54,7 +54,7 @@ function App() {
         <ScrollToTop />
         <Navbar />
         <Routes>
-          <Route path='React-Own-Portfolio/' element={<Main />} />
+          <Route path='/' element={<Main />} />
           <Route path='/projects' element={<ProjectList projects={projects} />} />
           <Route path='/project/:projectId' element={<ProjectDisplay projects={projects} />} />
         </Routes>
