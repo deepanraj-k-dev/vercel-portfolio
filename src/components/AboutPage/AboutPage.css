@@ -1,0 +1,52 @@
+.aboutpage {
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.about-content h1 {
+    font-size: 64px;
+    font-weight: 500;
+    color: #344054;
+    margin-bottom: 30px;
+}
+
+span {
+    color: #FD853A;
+}
+
+.about-content p {
+    font-size: 20px;
+    text-align: justify;
+    color: #344054;
+    margin-bottom: 30px;
+
+}
+
+.about-content{
+    padding: 10px 20px;
+    margin-right: 50px;
+}
+
+    
+.about-img {
+    position: relative;
+}
+
+.about-img .about-img-after {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 90%;
+    top: -60px;
+    margin-left: 10px;
+    display: none;
+}
+
+
+.about-img:hover .about-img-after{
+    width: 100%;
+    display: block;
+    top: -60px;
+    margin-left: -15px;
+}

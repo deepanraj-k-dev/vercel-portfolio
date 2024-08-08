@@ -1,0 +1,268 @@
+* {
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.hero-page {
+    height: auto;
+    margin-bottom: 15%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+.main-content.hide {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+
+.main-btn button {
+    width: 120px;
+    height: 50px;
+    padding: 12.75px 25.49px;
+    border-radius: 38.24px;
+    border: 1px solid black;
+    background: #FFFFFF1A;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.main-btn button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 38.24px;
+}
+
+.main-btn button:active {
+    color: #000
+}
+
+.main-btn button:active:after {
+    background: #FD853A;
+}
+
+.main-btn button:hover:before {
+    opacity: 1;
+}
+
+.main-btn button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    left: 0;
+    top: 0;
+    border-radius: 38.24px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.main-btn img {
+    width: 27.5px;
+    height: 28.5px;
+    position: relative;
+    top: -18px;
+    left: -9px;
+}
+
+.main-data {
+    font-size: 36px;
+    text-align: center;
+
+}
+
+.main-data img {
+    position: relative;
+    top: -30px;
+    left: -350px;
+}
+
+.main-data h1 {
+    margin: 0;
+}
+
+.main-data span {
+    color: #FD853A;
+}
+
+
+
+.main-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.main-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -100px;
+    right: -55px;
+    transition: all 0.5s ease;
+}
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    top: -100px;
+    right: -15px;
+    transition: all 0.5s ease;
+}
+
+.main-right.show {
+    transform: translateY(-200px);
+}
+
+.main-left.show {
+    transform: translateY(-200px);
+}
+
+
+
+.main-left img {
+    width: 36px;
+    height: 36px;
+}
+
+.main-right,
+h1,
+p {
+    margin: 0;
+
+}
+
+.main-left p,
+.main-right p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #344054;
+}
+
+.main-star img {
+    width: 32px;
+    height: 32px;
+}
+
+.main-img-btn {
+    border: 2px solid white;
+    background: radial-gradient(150.36% 227.1% at 8.75% 100%, #c9c9c99d 0%, rgba(255, 255, 255, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    height: 60px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    position: relative;
+    bottom: -205px;
+    z-index: 4;
+}
+
+.btn-arrow {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.btn-arrow img {
+    display: none;
+}
+
+.btn-arrow:hover {
+    border: 0.5px solid rgba(255, 255, 255, 0.678);
+    border-radius: 60px;
+    padding: 8px 25px;
+    background: #FD853A;
+}
+
+.btn-arrow:hover img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-left: 13px;
+}
+
+.main-content-img {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 0.4fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    top: 80px;
+}
+
+.main-middle {
+    position: relative;
+    width: 50%;
+    /* Adjust as necessary */
+    top: -50px;
+}
+
+.main-back,
+.main-middle-img,
+.main-front {
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.main-front {
+    position: absolute;
+    z-index: 3;
+    bottom: -262px;
+}
+
+.main-middle-img {
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.main-middle-img.show {
+    top: -320px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.main-middle img {
+    width: 230%;
+}
