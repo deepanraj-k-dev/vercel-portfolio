@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <div style={{ margin: '0px 0px' }}>
+    <SpeedInsights/>
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
