@@ -107,7 +107,7 @@ const Hero = () => {
                 />
                 <img src={main_front} alt="Front" className="main-front" />
                 <div className="main-img-btn">
-                    <a className='btn-arrow' href={'https://github.com/Deepanraj1508' } target="_blank" rel="noopener noreferrer">GitHub <img src={up_arrow} alt="" /></a>
+                    <a className='btn-arrow' href={'https://github.com/deepanraj-k-dev' } target="_blank" rel="noopener noreferrer">GitHub <img src={up_arrow} alt="" /></a>
                     <a className='btn-arrow' href={resume} target="_blank" rel="noopener noreferrer">Resume <img src={up_arrow} alt="" /></a>
                 </div>
             </div>

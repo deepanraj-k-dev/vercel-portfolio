@@ -111,7 +111,7 @@ const Footer = () => {
         </div>
         <hr />
         <div className='footer-container-bottom'>
-          <p>Copyright © 2024 Deepanraj. All Rights Reserved.</p>
+          <p>Copyright © {new Date().getFullYear()} Deepanraj. All Rights Reserved.</p>
         </div>
       </div>
     </div>
