@@ -325,6 +325,9 @@
     .resume-container {
         margin-top: 40px !important;
     }
+    .resume-title {
+        font-size: 36px !important;
+    }
 }
 
 @media (max-width: 500px) {
@@ -444,6 +447,9 @@
     /* Resume Section Mobile Overrides */
     .resume-container {
         margin-top: 20px !important;
+    }
+    .resume-title {
+        font-size: 30px !important;
     }
 
 

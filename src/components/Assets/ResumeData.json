@@ -1,0 +1,90 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "role": "Python Back-end Developer",
+      "company": "Vybog India Pvt. Ltd.",
+      "location": "Chennai, TN",
+      "duration": "November 2023 - Present",
+      "tag": "Current Role",
+      "details": [
+        "Developed and maintained web applications using Django, enhancing user experience and functionality.",
+        "Collaborated with front-end developers to integrate APIs and improve overall application performance.",
+        "Implemented LLM (Large Language Model) using OpenAI, resulting in improved accuracy for the Resume parser.",
+        "Wrote and executed unit tests using PyTest, ensuring robust and error-free code.",
+        "Worked with SQL databases to create, read, update, and delete data as per application requirements.",
+        "Participated in code reviews and contributed to the development of best practices and coding standards.",
+        "Automated routine tasks using Python scripts, increasing team productivity by 15%.",
+        "Documented code functionalities and processes, improving knowledge sharing within the team."
+      ]
+    },
+    {
+      "id": 1,
+      "role": "Python Back-end Developer",
+      "company": "Vybog India Pvt. Ltd.",
+      "location": "Chennai, TN",
+      "duration": "November 2023 - Present",
+      "tag": "Current Role",
+      "details": [
+        "Developed and maintained web applications using Django, enhancing user experience and functionality.",
+        "Collaborated with front-end developers to integrate APIs and improve overall application performance.",
+        "Implemented LLM (Large Language Model) using OpenAI, resulting in improved accuracy for the Resume parser.",
+        "Wrote and executed unit tests using PyTest, ensuring robust and error-free code.",
+        "Worked with SQL databases to create, read, update, and delete data as per application requirements.",
+        "Participated in code reviews and contributed to the development of best practices and coding standards.",
+        "Automated routine tasks using Python scripts, increasing team productivity by 15%.",
+        "Documented code functionalities and processes, improving knowledge sharing within the team."
+      ]
+    },
+    {
+      "id": 1,
+      "role": "Python Back-end Developer",
+      "company": "Vybog India Pvt. Ltd.",
+      "location": "Chennai, TN",
+      "duration": "November 2023 - Present",
+      "tag": "Current Role",
+      "details": [
+        "Developed and maintained web applications using Django, enhancing user experience and functionality.",
+        "Collaborated with front-end developers to integrate APIs and improve overall application performance.",
+        "Implemented LLM (Large Language Model) using OpenAI, resulting in improved accuracy for the Resume parser.",
+        "Wrote and executed unit tests using PyTest, ensuring robust and error-free code.",
+        "Worked with SQL databases to create, read, update, and delete data as per application requirements.",
+        "Participated in code reviews and contributed to the development of best practices and coding standards.",
+        "Automated routine tasks using Python scripts, increasing team productivity by 15%.",
+        "Documented code functionalities and processes, improving knowledge sharing within the team."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "institution": "Jairams Arts and Science College",
+      "location": "Karur, Tamil Nadu",
+      "duration": "2020 - 2023",
+      "tag": "Graduation",
+      "score": "82%",
+      "description": "Completed undergraduate degree in Computer Applications with a focus on core programming concepts, data structures, and database management."
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "title": "SEO (Search Engine Optimization)",
+      "issuer": "HubSpot Academy",
+      "duration": "August 2024 - September 2025"
+    },
+    {
+      "id": 2,
+      "title": "Python (Data Science) & SQL",
+      "issuer": "Cognitive Class AI (IBM Network)",
+      "duration": "2023"
+    },
+    {
+      "id": 3,
+      "title": "Front-end Development",
+      "issuer": "Coursera (Meta)",
+      "duration": "2023"
+    }
+  ]
+}
