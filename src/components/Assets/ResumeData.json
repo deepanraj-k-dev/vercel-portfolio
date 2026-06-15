@@ -2,10 +2,10 @@
   "experience": [
     {
       "id": 1,
-      "role": "Python Back-end Developer",
-      "company": "Vybog India Pvt. Ltd.",
-      "location": "Chennai, TN",
-      "duration": "November 2023 - Present",
+      "role": "Software Developer",
+      "company": "Pirai Infotech Pvt. Ltd.",
+      "location": "Pollachi, TN",
+      "duration": "Nov 2025 - Present",
       "tag": "Current Role",
       "details": [
         "Developed and maintained web applications using Django, enhancing user experience and functionality.",
@@ -19,30 +19,28 @@
       ]
     },
     {
-      "id": 1,
-      "role": "Python Back-end Developer",
-      "company": "Vybog India Pvt. Ltd.",
-      "location": "Chennai, TN",
-      "duration": "November 2023 - Present",
-      "tag": "Current Role",
+      "id": 2,
+      "role": "Software Developer",
+      "company": "Platiga Technology Pvt. Ltd., ",
+      "location": "Mumbai, MH",
+      "duration": "Sep 2024 to Aug 2025",
+      "tag": "Previous Role",
       "details": [
-        "Developed and maintained web applications using Django, enhancing user experience and functionality.",
-        "Collaborated with front-end developers to integrate APIs and improve overall application performance.",
-        "Implemented LLM (Large Language Model) using OpenAI, resulting in improved accuracy for the Resume parser.",
-        "Wrote and executed unit tests using PyTest, ensuring robust and error-free code.",
-        "Worked with SQL databases to create, read, update, and delete data as per application requirements.",
-        "Participated in code reviews and contributed to the development of best practices and coding standards.",
-        "Automated routine tasks using Python scripts, increasing team productivity by 15%.",
-        "Documented code functionalities and processes, improving knowledge sharing within the team."
+        "Developed and maintained ERP middleware using Python, Flask, and MySQL.",
+        "Designed and implemented RESTful APIs for seamless data exchange between ERP modules.",
+        "Conducted API testing and validation using Postman for functionality and performance.",
+        "Optimized MySQL database queries for enhanced application performance.",
+        "Collaborated with cross-functional teams to gather requirements and deliver scalable solutions.",
+        "Provided ongoing support, troubleshooting, and bug fixing for production systems."
       ]
     },
     {
-      "id": 1,
+      "id": 3,
       "role": "Python Back-end Developer",
       "company": "Vybog India Pvt. Ltd.",
       "location": "Chennai, TN",
-      "duration": "November 2023 - Present",
-      "tag": "Current Role",
+      "duration": "Nov 2023 to Aug 2024",
+      "tag": "Previous Role",
       "details": [
         "Developed and maintained web applications using Django, enhancing user experience and functionality.",
         "Collaborated with front-end developers to integrate APIs and improve overall application performance.",

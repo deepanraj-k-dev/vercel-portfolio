@@ -491,4 +491,17 @@
     .timeline-card {
         padding: 20px;
     }
+
+    .resume-tabs {
+        flex-direction: column !important;
+        overflow-x: visible !important;
+        padding-bottom: 0 !important;
+        gap: 10px !important;
+    }
+
+    .resume-tab-btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
 }

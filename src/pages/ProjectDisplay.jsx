@@ -1,6 +1,7 @@
 // src/components/ProjectDisplay.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import './ProjectList.css';
 
 const ProjectDisplay = ({ projects }) => {
@@ -10,7 +11,6 @@ const ProjectDisplay = ({ projects }) => {
     useEffect(() => {
         if (isFullscreen) {
             document.body.style.overflow = 'hidden';
-            window.scrollTo(0, 0);
         } else {
             document.body.style.overflow = 'auto';
         }
@@ -92,14 +92,29 @@ const ProjectDisplay = ({ projects }) => {
                 </div>
 
                 {isFullscreen && (
-                    <div className="fullscreen-view">
-                        <button className="close-button" onClick={closeFullscreen}>X</button>
-                        <button className="nav-button left" onClick={showPrevImage}>←</button>
-                        <img
-                            src={project.individualContribution.ScreenShots[currentImage]}
-                            alt={`Screenshot ${currentImage + 1}`}
-                        />
-                        <button className="nav-button right" onClick={showNextImage}>→</button>
+                    <div className="fullscreen-view" onClick={closeFullscreen}>
+                        <button className="close-button" onClick={closeFullscreen} aria-label="Close Fullscreen">
+                            <FiX />
+                        </button>
+                        
+                        <button className="nav-button left" onClick={(e) => { e.stopPropagation(); showPrevImage(); }} aria-label="Previous image">
+                            <FiChevronLeft />
+                        </button>
+                        
+                        <div className="fullscreen-image-wrapper" onClick={(e) => e.stopPropagation()}>
+                            <img
+                                src={project.individualContribution.ScreenShots[currentImage]}
+                                alt={`Screenshot ${currentImage + 1}`}
+                                className="fullscreen-active-img"
+                            />
+                            <div className="fullscreen-counter">
+                                {currentImage + 1} / {project.individualContribution.ScreenShots.length}
+                            </div>
+                        </div>
+                        
+                        <button className="nav-button right" onClick={(e) => { e.stopPropagation(); showNextImage(); }} aria-label="Next image">
+                            <FiChevronRight />
+                        </button>
                     </div>
                 )}
             </div>
