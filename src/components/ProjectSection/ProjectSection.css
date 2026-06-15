@@ -11,6 +11,7 @@
 .project-btn-main{
   display: flex;
   justify-content: center;
+  margin-top: 45px;
 }
 
 .project-main-content {
@@ -18,6 +19,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 

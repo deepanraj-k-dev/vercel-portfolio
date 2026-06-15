@@ -28,23 +28,7 @@ const Skills = () => {
                 <h1>Technical <span>Skills</span></h1>
             </div>
             <div className='skills_container'>
-                {skills_data.slice(0, 6).map(skill => (
-                    <div key={skill.id} className="skills" onClick={() => openModal(skill)}>
-                        <img src={skill.image} alt={skill.name} />
-                        <h4>{skill.name}</h4>
-                    </div>
-                ))}
-            </div>
-            <div className='skills_container'>
-                {skills_data.slice(6, 12).map(skill => (
-                    <div key={skill.id} className="skills" onClick={() => openModal(skill)}>
-                        <img src={skill.image} alt={skill.name} />
-                        <h4>{skill.name}</h4>
-                    </div>
-                ))}
-            </div>
-            <div className='skills_container'>
-                {skills_data.slice(12, 18).map(skill => (
+                {skills_data.map(skill => (
                     <div key={skill.id} className="skills" onClick={() => openModal(skill)}>
                         <img src={skill.image} alt={skill.name} />
                         <h4>{skill.name}</h4>

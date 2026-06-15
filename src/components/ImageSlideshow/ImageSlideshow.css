@@ -1,47 +1,304 @@
-.slideshow-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slide-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .each-slide {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    background: #fff;
-    position: relative;
-    z-index: 2;
-  }
-  
-  .each-slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .blurred-image {
-    width: 30%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px);
-    position: absolute;
-    top: 0;
-    z-index: 1;
-  }
+.premium-slider-container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 50px;
+  overflow: visible;
+}
 
-  
-  .react-slideshow-container+ul.indicators{
-    padding: 0%;
+.slideshow-slides-wrapper {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+.slideshow-slide {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.96) translateY(15px);
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.slideshow-slide.active {
+  position: relative;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* Slide Left Side: Info Details */
+.slide-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.project-category {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #FD853A;
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #344054;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.project-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #667085;
+  margin: 0 0 24px 0;
+}
+
+/* Tech Badges */
+.tech-badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #FFF9F5;
+  border: 1px solid rgba(253, 133, 58, 0.15);
+  color: #475467;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+  background: #FFF2EA;
+  border-color: rgba(253, 133, 58, 0.3);
+}
+
+.tech-badge-icon {
+  height: 16px;
+  width: auto;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+/* CTA Button */
+.slide-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FD853A;
+  color: #ffffff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(253, 133, 58, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slide-cta-btn:hover {
+  background: #E06B23;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(224, 107, 35, 0.3);
+}
+
+.slide-cta-btn .cta-icon {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.slide-cta-btn:hover .cta-icon {
+  transform: translateX(4px);
+}
+
+/* Slide Right Side: Media Card */
+.slide-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.media-card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.media-card-wrapper:hover {
+  transform: scale(1.02) translateY(-6px);
+  box-shadow: 0 30px 60px rgba(253, 133, 58, 0.12);
+}
+
+.glass-reflection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.media-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Navigation Arrow Buttons */
+.slider-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #344054;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow-btn:hover {
+  background: #FD853A;
+  border-color: #FD853A;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 18px rgba(253, 133, 58, 0.25);
+}
+
+.slider-arrow-btn.prev {
+  left: 0;
+}
+
+.slider-arrow-btn.next {
+  right: 0;
+}
+
+/* Navigation Dots */
+.slider-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 35px;
+}
+
+.slider-dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.12);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slider-dot-btn.active {
+  background: #FD853A;
+  width: 26px;
+  border-radius: 6px;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .slideshow-slide {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
+  
+  .slideshow-slide.active {
+    position: relative;
+  }
+  
+  .premium-slider-container {
+    padding: 20px 30px;
+  }
+  
+  .slide-media {
+    order: -1; /* Screenshot on top */
+  }
+  
+  .media-card-wrapper {
+    height: 250px;
+  }
+  
+  .project-title {
+    font-size: 28px;
+  }
+  
+  .project-description {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  
+  .tech-badges-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .premium-slider-container {
+    padding: 15px 10px;
+  }
+  
+  .slider-arrow-btn {
+    display: none; /* Hide arrows on mobile for better thumb friendliness */
+  }
+  
+  .media-card-wrapper {
+    height: 190px;
+  }
+  
+  .project-title {
+    font-size: 24px;
+  }
+}

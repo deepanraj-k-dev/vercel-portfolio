@@ -73,8 +73,18 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.project-video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
 
 .project-data-skills ul {
     display: flex;
@@ -84,15 +94,16 @@
     gap: 50px;
 }
 
-.project-data-skills li img {
+.project-skill-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     transition: filter .1s, transform .1s;
 }
 
-.project-data-skills li img:hover {
+.project-skill-img:hover {
     filter: drop-shadow(5px 5px 25px #ff8000);
     transform: scale(1.1);
-    width: 90px;
-    height: 90px;
 }
 
 

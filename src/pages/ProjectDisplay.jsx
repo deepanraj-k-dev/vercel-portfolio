@@ -44,8 +44,6 @@ const ProjectDisplay = ({ projects }) => {
         <div className='projects-data-display'>
             <div className="project-video">
                 <iframe
-                    width="800"
-                    height="400"
                     src={project.individualContribution.videoLink}
                     title="YouTube video player"
                     frameBorder="0"
@@ -63,7 +61,7 @@ const ProjectDisplay = ({ projects }) => {
 
             <div className="project-data-description">
                 <p className='project-data-main'>Domain: <span>{project.domain}</span></p>
-                <p className='project-data-main'>Project Description: <span>{project.ProjectDescription}</span></p>
+                <p className='project-data-main'>Project Description: <span>{project.projectDescription || project.ProjectDescription}</span></p>
             </div>
 
             <div className="project-data-skills">
@@ -71,7 +69,7 @@ const ProjectDisplay = ({ projects }) => {
                 <ul>
                     {project.individualContribution.skills.map((skill, index) => (
                         <li key={index}>
-                            {skill.image && <img src={skill.image} alt={skill.name} style={{ width: '80px', height: '80px', padding: '5px 60px;' }} />}
+                            {skill.image && <img src={skill.image} alt={skill.name} className="project-skill-img" />}
                             {skill.name}
                         </li>
                     ))}

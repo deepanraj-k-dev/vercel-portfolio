@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Events, scrollSpy } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import '../Responsive/Responsive.css';
 import logo from '../Assets/logo.png';
@@ -7,6 +8,8 @@ import logo from '../Assets/logo.png';
 const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const [activeLink, setActiveLink] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
@@ -14,6 +17,14 @@ const Navbar = () => {
 
     const handleSetActive = (to) => {
         setActiveLink(to);
+    };
+
+    const handleNavClick = (sectionId, event) => {
+        if (location.pathname !== '/') {
+            event.preventDefault();
+            setMenuVisible(false);
+            navigate('/', { state: { scrollTo: sectionId } });
+        }
     };
 
     React.useEffect(() => {
@@ -43,6 +54,7 @@ const Navbar = () => {
                         duration={500}
                         className={activeLink === 'home' ? 'active' : ''}
                         onSetActive={handleSetActive}
+                        onClick={(e) => handleNavClick('home', e)}
                     >
                         <li className="nav-item">Home</li>
                     </Link>
@@ -52,6 +64,7 @@ const Navbar = () => {
                         duration={500}
                         className={activeLink === 'skills' ? 'active' : ''}
                         onSetActive={handleSetActive}
+                        onClick={(e) => handleNavClick('skills', e)}
                     >
                         <li className="nav-item">Skills</li>
                     </Link>
@@ -61,6 +74,7 @@ const Navbar = () => {
                         duration={500}
                         className={activeLink === 'project' ? 'active' : ''}
                         onSetActive={handleSetActive}
+                        onClick={(e) => handleNavClick('project', e)}
                     >
                         <li className="nav-item">Projects</li>
                     </Link>
@@ -80,6 +94,7 @@ const Navbar = () => {
                         duration={500}
                         className={activeLink === 'resume' ? 'active' : ''}
                         onSetActive={handleSetActive}
+                        onClick={(e) => handleNavClick('resume', e)}
                     >
                         <li className="nav-item">Resume</li>
                     </Link>
@@ -90,6 +105,7 @@ const Navbar = () => {
                         duration={500}
                         className={activeLink === 'about' ? 'active' : ''}
                         onSetActive={handleSetActive}
+                        onClick={(e) => handleNavClick('about', e)}
                     >
                         <li className="nav-item">About</li>
                     </Link>
@@ -100,6 +116,7 @@ const Navbar = () => {
                         duration={500}
                         className={activeLink === 'contact' ? 'active' : ''}
                         onSetActive={handleSetActive}
+                        onClick={(e) => handleNavClick('contact', e)}
                     >
                         <li className="nav-item">Contact</li>
                     </Link>
